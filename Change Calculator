@@ -1,0 +1,30 @@
+money = float(input("Enter a value in cash: "))
+
+count = 0
+quarters = 0
+dimes = 0
+nickels = 0
+pennies = 0
+
+if (money >= 0.25):
+    quarters = (int)(money / 0.25)
+    count += quarters
+    money = (money - quarters * 0.25)
+if (money >= 0.1):
+    dimes = (int)(money / 0.1)
+    count += dimes
+    money = (money - dimes * 0.1)
+if (money >= 0.05):
+    nickels = (int)(money / 0.05)
+    count += nickels
+    money = (money - nickels * 0.05)
+if (money >= 0.01):
+    pennies = (int)(money / 0.01)
+    count += pennies
+    money = (money - pennies * 0.01)
+
+print("The minimum number of coins is", count, ":")
+print(quarters, "quarters")
+print(dimes, "dimes")
+print(nickels, "nickels")
+print(pennies, "pennies")
